@@ -7,7 +7,7 @@ WORKDIR /shkeeper
 COPY ./walletnotify.sh .
 
 RUN chmod +x walletnotify.sh \
-    && curl -L https://bitcoin.org/bin/bitcoin-core-22.0/bitcoin-22.0-x86_64-linux-gnu.tar.gz -o bitcoin.tar.gz \
+    && curl -L https://bitcoin.org/bin/bitcoin-core-22.0/bitcoin-22.0-arm-linux-gnu.tar.gz -o bitcoin.tar.gz \
     && tar -xzvf bitcoin.tar.gz \
     && cp bitcoin-22.0/bin/bitcoind bitcoin-22.0/bin/bitcoin-cli . \
     && rm -rf bitcoin.tar.gz bitcoin-22.0
