@@ -2,7 +2,7 @@ FROM ubuntu:focal
 
 RUN apt-get update && apt-get -y install python3 python3-pip git sqlite3 curl
 
-RUN git clone https://github.com/vsys-host/shkeeper.io.git
+RUN git clone https://github.com/shimuldn/shkeeper.io.git
 
 WORKDIR /shkeeper.io
 
