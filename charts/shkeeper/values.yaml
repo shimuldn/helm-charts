@@ -5,7 +5,7 @@
 dev:
   imagePullSecrets:
 
-storageClassName:
+storageClassName: local-path
 
 #
 # Shkeeper
@@ -20,73 +20,4 @@ shkeeper:
 
 btc:
   enabled: true
-ltc:
-  enabled: true
-doge:
-  enabled: true
 
-#
-# Tron
-#
-
-tron_fullnode:
-  enabled: false
-  url: http://java-tron:8090
-  solidity_url: http://java-tron:8091
-  mainnet: true
-  JAVA_TOOL_OPTIONS: ""
-  nodeSelector: {}
-  tolerations: []
-
-tron_shkeeper:
-  image: shimuldn/tron-shkeeper:1.0.14
-  host: 'tron-shkeeper'
-  port: 6000
-
-trx:
-  enabled: false
-usdt:
-  enabled: false
-usdc:
-  enabled: false
-
-#
-# Ethereum
-#
-
-eth_fullnode:
-  enabled: false
-  url: http://ethereum:8545
-  mainnet: true
-  nodeSelector: {}
-  tolerations: []
-
-ethereum_shkeeper:
-  image: shimuldn/ethereum-shkeeper:1.0.10
-
-eth:
-  enabled: false
-eth_usdt:
-  enabled: false
-eth_usdc:
-  enabled: false
-
-#
-# Monero
-#
-
-monero:
-
-  enabled: false
-  image: shimuldn/monero:v0.18.1.2
-  mainnet: true
-
-  fullnode:
-    enabled: false
-    monerod:
-      host: "monerod"
-      port: "1111"
-      user: "monerod"
-      password: "monerod"
-      nodeSelector: {}
-      tolerations: []
